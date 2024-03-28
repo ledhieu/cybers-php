@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+    font-family: Plaak2;
+    src: url('static/fonts/Plaak2-Regular.otf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: Plaak2;
+    src: url('static/fonts/Plaak2-Bold.otf');
+    font-weight: 600;
+}
+@font-face{
+    font-family: Plaak3;
+    src: url('static/fonts/Plaak3-Regular.otf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: Plaak3;
+    src: url('static/fonts/Plaak3-Bold.otf');
+    font-weight: 600;
+}
+@font-face{
+    font-family: "Hand";
+    src: url('static/fonts/SVN-Rockness.otf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: XenoDemon;
+    src: url('static/fonts/XenoDemon.otf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Space Armor";
+    src: url('static/fonts/SpaceArmor.otf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: Alliance;
+    src: url('static/fonts/Alliance-NeueRegular.otf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: Tuesday;
+    src: url('static/fonts/TuesdayNight.otf');
+    font-weight: 400;
+}
+
+:root{
+    --scrollbar-width: 10px;
+    --title-font: "Space Armor";
+    --primary-font: Plaak2;
+    --secondary-font: Alliance;
+    --handwriting: Tuesday, "Hand";
+    --primary: #79DDA9;
+    --primary-rgb: 121 221 169;
+    --white: #fff;
+    --black: #050C09;
+    --accent: #1F3A2C;
+
+    --site-margin-size: 1.5rem;
+    --site-gutter-size: 0.75rem;
+    --site-header-height: 4.375rem;
+    --site-meta-menu-height: 2.5rem;
+    --site-menu-bar-height: 2.5rem;
+    --site-theme-alt: 255 255 255;
+    --site-theme-secondary: 0 0 0 ;
+    --columns: 12;
+    --site-column-size: calc((100vw -(var(--site-margin-size)* 2) - var(--site-gutter-size)*(var(--columns) - 1)) / var(--columns));
+}
+*{
+    font-family: var(--secondary-font), "Sans Serif";
+}
+p{
+    font-family: var(--secondary-font), "Sans Serif";
+    font-size: 16px;
+    line-height: 16px;
+}
+h1, h2{
+    font-family: var(--title-font), "Sans Serif";
+    font-weight: 400;
+    font-size: clamp(2rem, 4.5vw + 1rem, 4.5rem);
+}
+.h1{
+    font-size: clamp(2rem, 4.5vw + 1rem, 4.5rem);
+}
+.h2{
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
+}
+h3{
+    font-family: Plaak3;
+    font-size: 24px;
+}
+.hand{
+    font-family: var(--handwriting)
+}
+.text-primary, .text-theme-primary{
+    color: var(--primary)
+}
+.border-theme-primary {
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--primary-rgb) / var(--tw-border-opacity));
+}
+.bg-theme-primary {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--primary-rgb) / var(--tw-bg-opacity));
+}
+.bg-theme-alt {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--site-theme-alt) / var(--tw-bg-opacity));
+}
+.bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.border-theme-primary {
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--primary-rgb) / var(--tw-border-opacity));
+}
+.plaak{
+    font-family: Plaak3;
+}
+.body{
+    /* background: var(--black); */
+    color: var(--white);
+}
+.checker{
+    background-image: url('/static/assets/checker.svg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+.ui-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    grid-auto-columns: auto 1fr auto;
+}
+.pt-Header-height {
+    padding-top: var(--site-header-height);
+}
+.pb-Header-height {
+    padding-bottom: var(--site-header-height);
+}
+.pb-sms {
+    padding-bottom: var(--site-margin-size);
+}
+.px-sms {
+    padding-left: var(--site-margin-size);
+    padding-right: var(--site-margin-size);
+}
+.bg-stripes {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, #fff 0, #fff 6px);
+}
+.bg-stripes-theme {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, var(--primary) 0, var(--primary) 6px);
+}
+.text-white-30, .text-white-30::placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(87 87 87 / var(--tw-text-opacity));
+}
+.t-ui-sm, .t-ui-sm-fixed, .t-ui-xs {
+    /* font-family: Plaak3, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+    font-weight: 700;
+    line-height: 85%;
+    letter-spacing: -.01em;
+}
+.t-ui-sm, .t-ui-sm-fixed {
+    font-size: 0.7375rem;
+}
+.t-ui-xl, .t-ui-xxl {
+    font-weight: 700;
+    line-height: 85%;
+    letter-spacing: -.01em;
+}
+.t-ui-xxl {
+    font-size: clamp(1.5rem, .7vw + 1.3rem, 2.125rem);
+}
+.t-h2{
+    font-size: clamp(3rem, 1.8vw + 2.6rem, 4.5rem);
+    letter-spacing: -.01em;
+    line-height: 85%;
+}
+.text-xxxs{
+    font-size: 0.625rem
+}
+
+/* Button */
+.btn,
+.btn-outline {
+    padding: 15px;
+    padding-right: 25px;
+    font-weight: bold;
+    color: black;
+    --aug-tl: 2px;
+    --aug-tr: 2px;
+    --aug-bl: 2px;
+    --aug-br: 20px;
+}
+.btn {
+    background: var(--primary);
+}
+.btn-outline {
+    color: #ffffff00;
+    text-wrap: nowrap;
+    background: none;
+    --aug-border-bg: var(--primary);
+    --aug-border-all: 0.5px;
+    top: 8px;
+    left: 8px;
+    transition: 0.2s ease;
+}
+.btn-group {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn-group:hover {
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    transition: 0.2s ease;
+}
+.btn-group:hover .btn-outline {
+    top: 8px;
+    left: 11px;
+    transition: 0.2s ease;
+}
+
+.gradient-bottom {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+.gradient-top {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+
+.w-screen{
+    width: calc(100vw - var(--scrollbar-width))!important
+}
+
+@media only screen and (max-width: 568px){
+    :root{
+        --site-margin-size: 1rem;
+    }
+}
